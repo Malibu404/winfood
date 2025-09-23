@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win Myanmar House - Every meals is a taste of home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Screenshot%202025-09-24%20044851.png" alt="Win Myanmar House" class="logo-icon">
+                    <span class="logo-text">Win Myanmar House</span>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('products')" class="nav-link">Our Products</button>
+                    <button onclick="scrollToSection('about')" class="nav-link">About Us</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">Contact</button>
+                </nav>
+
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <nav class="mobile-nav">
+                <button onclick="scrollToSection('products')" class="mobile-nav-link">Our Products</button>
+                <button onclick="scrollToSection('about')" class="mobile-nav-link">About Us</button>
+                <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Animated background elements -->
+            <div class="bg-animation">
+                <div class="bg-blob bg-blob-1"></div>
+                <div class="bg-blob bg-blob-2"></div>
+                <div class="bg-blob bg-blob-3"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Every meal<br class="hero-title-break">
+                        <span class="hero-title-mobile-space"> </span>is a taste of home
+                    </h1>
+                    <p class="hero-description">
+                        Experience the rich, traditional tastes you love, with the convenience you need. 
+                        Discover our complete range of authentic products below.
+                    </p>
+                </div>
+
+                <!-- Product Carousel -->
+                <div class="flip-card-container">
+                    <div id="flip-card" class="flip-card">
+                        <!-- Front Face -->
+                        <div class="flip-card-front">
+                            <div class="flip-card-content">
+                                <h3 class="featured-title">Featured Product</h3>
+                                <h4 id="current-product-title" class="current-product-title">Ready to Cook Mohinga</h4>
+                                <p id="current-product-description" class="current-product-description">Authentic Myanmar mohinga ready to cook - the nation's most beloved noodle soup.</p>
+                                <button class="cta-button">Explore Products</button>
+                            </div>
+                        </div>
+
+                        <!-- Back Face -->
+                        <div class="flip-card-back">
+                            <img id="current-product-image" src="figma:asset/8b0098917357467b7c5d83885f03826ba2d10d5b.png" alt="Product Image" class="product-image">
+                            <div class="product-overlay">
+                                <div class="product-overlay-content">
+                                    <h4 id="back-product-title" class="back-product-title">Ready to Cook Mohinga</h4>
+                                    <p class="back-product-subtitle">Ready to enhance your meals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <button id="prev-btn" class="carousel-nav carousel-prev">‹</button>
+                    <button id="next-btn" class="carousel-nav carousel-next">›</button>
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
+                    </div>
+
+                    <!-- Auto-play control -->
+                    <button id="autoplay-btn" class="autoplay-btn" title="Pause auto-rotation">⏸</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Products</h2>
+                    <p class="section-description">
+                        From ready-to-eat curries to essential spices, our products are crafted with care to deliver 
+                        authentic flavors. We use only the finest ingredients to ensure a taste you can trust.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card" data-product="0">
+                        <div class="product-image-container">
+                            <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Mohinga%2060g%20copy.jpg" alt="Ready to Cook Mohinga" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ready to Cook Mohinga</h3>
+                            <p class="product-description">Authentic Myanmar mohinga ready to cook - the nation's most beloved noodle soup with rich fish broth and rice noodles.</p>
+                            <button class="learn-more-btn" onclick="showProductDetail(0)">
+                                <span>Learn More</span>
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                        <div class="shine-effect"></div>
+                    </div>
+
+                    <div class="product-card" data-product="1">
+                        <div class="product-image-container">
+                            <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Ambarella%20Fish%20Paste%20Curry.png" alt="Ambarella Fish Paste Curry" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Ambarella Fish Paste Curry</h3>
+                            <p class="product-description">Ready to eat ambarella fish paste curry - a tangy and flavorful traditional Myanmar dish.</p>
+                            <button class="learn-more-btn" onclick="showProductDetail(1)">
+                                <span>Learn More</span>
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                        <div class="shine-effect"></div>
+                    </div>
+
+                    <div class="product-card" data-product="2">
+                        <div class="product-image-container">
+                            <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Mayan%20Fish%20Paste%20Curry.png" alt="Mayan Fish Paste Curry" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Mayan Fish Paste Curry</h3>
+                            <p class="product-description">Ready to eat Mayan fish paste curry - a rich and aromatic traditional Myanmar curry with deep flavors.</p>
+                            <button class="learn-more-btn" onclick="showProductDetail(2)">
+                                <span>Learn More</span>
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                        <div class="shine-effect"></div>
+                    </div>
+                    
+                    <div class="product-card" data-product="3">
+                        <div class="product-image-container">
+                            <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Tamarind%20Fish%20Paste%20Curry.png" alt="Tamarind Fish Paste Curry" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tamarind Fish Paste Curry</h3>
+                            <p class="product-description">Ready to eat Mayan fish paste curry - a rich and aromatic traditional Myanmar curry with deep flavors.</p>
+                            <button class="learn-more-btn" onclick="showProductDetail(3)">
+                                <span>Learn More</span>
+                                <span class="arrow">→</span>
+                            </button>
+                        </div>
+                        <div class="shine-effect"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1677132529121-3ea5b62ac9b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGtpdGNoZW4lMjBjb29raW5nJTIwZmFtaWx5fGVufDF8fHx8MTc1ODUyNzQ1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Our Story" class="story-image">
+                    </div>
+
+                    <div class="about-text">
+                        <div class="glass-card">
+                            <h2 class="about-title">Our Story</h2>
+                            <p class="about-paragraph">
+                                Founded on a passion for authentic Myanmar home cooking, Win Myanmar House started with a simple goal: 
+                                to share the rich, traditional flavors of Myanmar heritage with the world. We believe that 
+                                every meal is a taste of home, and our products are crafted to bring that authentic Myanmar feeling to 
+                                your table, no matter where you are.
+                            </p>
+                            <p class="about-paragraph">
+                                We are committed to quality, sustainability, and community. By sourcing the best 
+                                ingredients and using time-honored Myanmar recipes, we ensure that every product we create 
+                                is a true reflection of our cultural values and culinary traditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-description">
+                        Have questions about our products or want to partner with us? We'd love to hear from you. 
+                        Reach out to us using the contact information below.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3 class="contact-title">Our Address</h3>
+                        <div class="contact-details">
+                            No.27, Jalan Meranti Jaya 12, Taman Meranti Jaya, 47100 Puchong<br>
+                            Selangar, Malasia
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3 class="contact-title">Phone Numbers</h3>
+                        <div class="contact-details">
+                            <p class="phone-number">+603-806107817</p>
+                            
+                            <p class="hours">Mon-Fri: 9AM-6PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3 class="contact-title">Email Us</h3>
+                        <div class="contact-details">
+                            <p class="email">office@myintthukhanadi.com</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://uploads.onecompiler.io/438a5mq9w/43xjbfs33/Screenshot%202025-09-24%20044851.png" alt="Win Myanmar House" class="logo-icon">
+                    <span class="logo-text">Win Myanmar House</span>
+                </div>
+                
+                <p class="copyright">&copy; 2025 Win Myanmar House. All Rights Reserved.</p>
+                
+                <div class="social-links">
+                    <span class="social-icon">☎️</span>
+                    <span class="social-icon">✉</span>
+                    <span class="social-icon">🏠</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail View -->
+    <div id="product-detail" class="product-detail">
+        <div class="container">
+            <button id="back-btn" class="back-btn">
+                <span class="back-arrow">←</span>
+                <span>Back to Products</span>
+            </button>
+
+            <div class="product-detail-content">
+                <div class="product-detail-image">
+                    <div class="glass-card">
+                        <img id="detail-image" src="" alt="" class="detail-image">
+                    </div>
+                </div>
+
+                <div class="product-detail-info">
+                    <div class="product-header">
+                        <h1 id="detail-title" class="detail-title"></h1>
+                        <div class="rating-section">
+                            <div class="stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <span id="detail-reviews" class="reviews-count">(127 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 class="detail-section-title">Product Description</h3>
+                        <p id="detail-description" class="detail-description"></p>
+                    </div>
+
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <div class="trust-icon">🛡️</div>
+                            <p class="trust-text">Quality Guaranteed</p>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-icon">🚛</div>
+                            <p class="trust-text">Fast Shipping</p>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-icon">❤️</div>
+                            <p class="trust-text">Made with Love</p>
+                        </div>
+                    </div>
+
+                    <button class="contact-cta">Contact Us for More Info</button>
+                </div>
+            </div>
+
+            <div class="product-details-tabs">
+                <div class="detail-tab">
+                    <div class="glass-card">
+                        <h3 class="tab-title">Ingredients</h3>
+                        <ul id="ingredients-list" class="ingredients-list"></ul>
+                    </div>
+                </div>
+
+                <div class="detail-tab">
+                    <div class="glass-card">
+                        <h3 class="tab-title">Nutrition Facts</h3>
+                        <div id="nutrition-facts" class="nutrition-facts"></div>
+                    </div>
+                </div>
+
+                <div class="detail-tab">
+                    <div class="glass-card">
+                        <h3 class="tab-title">How to Serve</h3>
+                        <ol id="how-to-serve" class="how-to-serve-list"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
